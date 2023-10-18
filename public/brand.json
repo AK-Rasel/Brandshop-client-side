@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Toyota",
+    "image": "https://i.ibb.co/rmYGX97/Car-Company-Toyota-Logo-PNG-Vector-Free-Download-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Ford",
+    "image": "https://i.ibb.co/LzKC0qm/22ece9ab55a1adc52e62c662c92ce342-1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "BMW",
+    "image": "https://i.ibb.co/GPvHBZy/bmw-logo-248-C3-D90-E6-seeklogo-com-1.png"
+  },
+  {
+    "id": 4,
+    "name": "Mercedes-Benz",
+    "image": "https://i.ibb.co/q0JP3DT/mercedes-benz-logo.png"
+  },
+  {
+    "id": 5,
+    "name": "Tesla",
+    "image": "https://i.ibb.co/XbH4XfX/tesla-symbol-1.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Honda",
+    "image": "https://i.ibb.co/CHNGmHN/Honda-Logo-1988-1.png"
+  }
+]
