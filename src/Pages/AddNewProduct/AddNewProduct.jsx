@@ -30,6 +30,7 @@ const AddNewProduct = () => {
             if (data.insertedId) {
                 swal("Add New Products!");
             }
+            from.reset()
         })
 
         

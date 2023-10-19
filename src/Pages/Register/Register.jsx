@@ -1,7 +1,50 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContextProvider } from "../../AuthProvider/AuthProvider";
 
 
 const Register = () => {
+    const {createRegister} = useContext(AuthContextProvider);
+    const naviget = useNavigate()
+    const [registerError, setRegisterError] = useState('');
+    const registerHandle = e => {
+        e.preventDefault()
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log(email,password)
+        
+
+
+            if (password.length < 6) {
+                setRegisterError("Password must contain last 6 characters");
+                return;
+            } else if (!/[A-Z]/.test(password)) {
+                setRegisterError('Must give an upper case letter.')
+                return;
+            } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                setRegisterError('Must include a special character')
+                return;
+            } 
+           
+    
+            // reset error 
+            setRegisterError('')
+            // setRegisterSuccess('')
+    
+            // console.log(password, email)
+    
+            createRegister(email, password)
+            .then(() => {
+                e.target.reset()
+                naviget("/")
+                // toast.success("Register Succsses Fully")
+                // console.log(result.user)
+                // setRegisterSuccess("Register Successfully")
+            })
+            .catch(error => {
+                setRegisterError(error.message)
+            })
+    }
     return (
         <div className=" flex flex-col min-h-[70vh]  mx-auto">
             <div className="hero-content flex-col  m-auto w-full ">
@@ -9,21 +52,23 @@ const Register = () => {
                     <h1 className="text-5xl font-bold mb-5 text-[#F0C543]">Register now!</h1>
                 </div>
                 <div className=" flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
-                    <form className=" p-8">
+                    <form onSubmit={registerHandle} className=" p-8">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text border-[#F0C543]">Email</span>
                             </label>
-                            <input type="email" placeholder="Enter New Email" className="input rounded-none focus:outline-none border-[#F0C543] input-bordered" required />
+                            <input type="email" name="email" placeholder="Enter New Email" className="input rounded-none focus:outline-none border-[#F0C543] input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input rounded-none focus:outline-none input-bordered border-[#F0C543]" required />
+                            <input type="password" name="password" placeholder="password" className="input rounded-none focus:outline-none input-bordered border-[#F0C543]" required />
                             {/* massagess */}
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover border-[#F0C543]">massagess</a>
+                            {
+                                            registerError && <span className="text-red-600">{registerError}</span>
+                                        }
                             </label>
                         </div>
                         <div className="form-control mt-6">

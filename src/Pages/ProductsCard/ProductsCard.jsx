@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const ProductsCard = ({brandProducts}) => {
-    const {_id,image,brand,model,name,availability,price,description,rating} = brandProducts
+const ProductsCard = ({product}) => {
+    const {_id,image,brand,model,name,availability,price,description,rating} = product
     // console.log(brandProducts)
 
     const deleteHandle = _id => {
@@ -38,7 +38,7 @@ const ProductsCard = ({brandProducts}) => {
 
 
     return (
-        <div className=" p-6 bg-base-100 shadow-xl my-10 flex-grow">
+        <div className="w-96 p-6 bg-base-100 shadow-xl my-10 flex-grow">
             <img className=" h-56 mx-auto mb-8" src={image} alt="Shoes" />
             <div className=" my-auto   pt-0">
                 <h2 className="card-title font-medium text-base text-gray-500">{brand}</h2>

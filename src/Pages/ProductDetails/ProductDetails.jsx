@@ -3,7 +3,30 @@ import { useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
     const productData = useLoaderData()
-    const {_id,image,brand,model,name,availability,price,description,rating} = productData
+    const {_id : id,image,brand,model,name,availability,price,description,rating,category} = productData
+    
+    const cartHandle = () =>{
+        const myCart = localStorage.getItem("my-cart");
+        if (!myCart) {
+          localStorage.setItem("my-cart", JSON.stringify([]));
+        }
+    
+        if (myCart) {
+          const myCart = JSON.parse(localStorage.getItem("my-cart"));
+          const carItem = {
+            id,
+            name,
+            brand,
+            price,
+          };
+    
+          const cars = myCart.find((item) => item.id === carItem.id);
+    
+          if (cars) {
+            console.log("Already added");
+          } else localStorage.setItem("my-cart", JSON.stringify([...myCart, carItem]));
+        }
+    }
     return (
         <div className="container mx-auto">
             <div className="hero min-h-screen ">
@@ -25,9 +48,9 @@ const ProductDetails = () => {
                         </div>
                         <p className="p-2">{description}</p>
                         <p>Availability :  {availability}</p>
-                        <p>Category :Sports Car</p>
+                        <p>Category :{category}</p>
                         <p>Tags :White</p>
-                        <button className="btn rounded-none btn-primary">Add To Cart</button>
+                        <button onClick={cartHandle} className="btn rounded-none btn-primary">Add To Cart</button>
                     </div>
                 </div>
             </div>

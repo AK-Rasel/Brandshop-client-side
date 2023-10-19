@@ -48,7 +48,7 @@ const UpdateProduct = () => {
             <div className="max-w-7xl  mx-auto  py-12 px-36">
                 <form onSubmit={upDatehandle}>
                     <div className="hero-content flex-col">
-                        <h1 className="font-Montserrat uppercase text-4xl font-bold text-[#F0C543]">Update Product</h1>
+                        <h1 className="font-Montserrat uppercase text-4xl font-bold text-[#F0C543]">Update : {name}</h1>
                         
                     </div>
                     <div className="flex gap-6">
