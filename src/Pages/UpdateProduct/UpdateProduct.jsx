@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
     const product = useLoaderData();
-    const {_id,image,brand,model,name,availability,price,description,rating,tags} =  product
+    const {_id,image,brand,model,name,availability,price,description,rating,category} =  product
     const upDatehandle = (e) => {
         e.preventDefault()
         const from = e.target
@@ -16,9 +16,9 @@ const UpdateProduct = () => {
         const price  = from.price.value
         const description  = from.description.value
         const rating = from.rating.value
-        const tags = from.tags.value
+        const category = from.category.value
         const image = from.image.value
-         const upDateProduct = {model,name,brand,availability,price,description,rating,tags,image}
+         const upDateProduct = {model,name,brand,availability,price,description,rating,category,image}
 
          fetch(`http://localhost:5001/products/${_id}`,{
             method:'PUT',
@@ -79,7 +79,7 @@ const UpdateProduct = () => {
                             <label className="label">
                                     <span className="label-text">Availability</span>
                                 </label>
-                                <input defaultValue={availability} type="text" name="availability" placeholder="Enter Category" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
+                                <input defaultValue={availability} type="text" name="availability" placeholder="Enter category" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
                             </div>
                         </div>
 
@@ -105,12 +105,12 @@ const UpdateProduct = () => {
                                 </label>
                                 <input defaultValue={rating} name="rating" type="text" placeholder="Enter Rating " className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
                             </div>
-                            {/* Tags */}
+                            {/* category */}
                             <div className="w-full">
                                 <label className="label">
-                                    <span className="label-text">Tags</span>
+                                    <span className="label-text">category</span>
                                 </label>
-                                <input defaultValue={tags}  type="text" name="tags" placeholder="Enter Tags" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
+                                <input defaultValue={category}  type="text" name="category" placeholder="Enter category" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
                             </div>
                         </div>
                         {/*  */}

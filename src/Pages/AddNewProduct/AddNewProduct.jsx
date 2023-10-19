@@ -12,9 +12,9 @@ const AddNewProduct = () => {
         const price  = from.price.value
         const description  = from.description.value
         const rating = from.rating.value
-        const tags = from.tags.value
+        const category = from.category.value
         const image = from.image.value
-        const addNewProduct = {model,name,brand,availability,price,description,rating,tags,image}
+        const addNewProduct = {model,name,brand,availability,price,description,rating,category,image}
         // console.log(addNewProduct)
         // sent data
         fetch('http://localhost:5001/products',{
@@ -71,7 +71,7 @@ const AddNewProduct = () => {
                             <label className="label">
                                     <span className="label-text">Availability</span>
                                 </label>
-                                <input type="text" name="availability" placeholder="Enter Category" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
+                                <input type="text" name="availability" placeholder="Enter category" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
                             </div>
                         </div>
 
@@ -98,12 +98,12 @@ const AddNewProduct = () => {
                                 </label>
                                 <input name="rating" type="text" placeholder="Enter Rating " className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
                             </div>
-                            {/* Tags */}
+                            {/* category */}
                             <div className="w-full">
                                 <label className="label">
-                                    <span className="label-text">Tags</span>
+                                    <span className="label-text">category</span>
                                 </label>
-                                <input type="text" name="tags" placeholder="Enter Tags" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
+                                <input type="text" name="category" placeholder="Enter category" className="input border-[#F0C543] focus:outline-none rounded-none input-bordered w-full " />
                             </div>
                         </div>
                         

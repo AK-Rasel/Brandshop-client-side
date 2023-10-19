@@ -22,12 +22,12 @@ const Navbar = () => {
         </NavLink></li>
         <hr className="border-gray-300" />
         <li><NavLink
-            to="/abouts"
+            to="/cart"
             className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-[#F0C543] underline link link-hover" : ""
             }
         >
-            Abouts Us
+            Cart
         </NavLink></li>
     </>
     return (
@@ -80,7 +80,7 @@ const Navbar = () => {
                 </>
 
             } */}
-            <Link to="/cart" className="font-semibold">Cart</Link>
+            
                 
                 <Link to="/login" className="font-semibold">Login</Link>
                 <Link to="/register" className="font-semibold hidden md:block ">Register</Link>
