@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import ProductsCard from "../ProductsCard/ProductsCard";
 // import { useEffect, useState } from "react";
 import Banner from "../../Components/Header/Banner/Banner";
@@ -22,13 +22,28 @@ const Products = () => {
             }
            
         </div> */}
-        <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 gap-12 ">
+        <div className="container mx-auto my-16">
+            
+        
+        <div className=" grid gap-10 grid-cols-1  ">
             {
                 allProducts.length ? (
                     allProducts.map((product)=><ProductsCard key={product._id}
                         product={product}></ProductsCard>)
-                ):<h1>Coming soon!</h1>
+                ):<div className="border h-screen ">
+                <div className="text-center">
+                    <div className="-mb-20">
+                    <h3 className="  text-7xl font-bold">Uh-Oh...</h3>
+                    <p className=" font-semibold text-lg">Pages Not Found</p>
+                    </div>
+                    <h1 className="text-[250px] font-extrabold">4<span className="text-[#F0C543]">0</span>4</h1>
+                    <Link to={'/'} className="btn  bg-[#F0C543] text-[#23393D] hover:bg-[#23393D]
+                    hover:text-white
+                    ">Goto Home</Link>
+                </div>
+            </div>
             }
+        </div>
         </div>
         </div>
     );

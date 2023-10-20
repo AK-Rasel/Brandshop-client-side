@@ -1,9 +1,11 @@
 
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import { AuthContextProvider } from "../../AuthProvider/AuthProvider";
 // import { AuthContextProvider } from "../../AuthProvider/AuthProvider";
+import {toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -22,7 +24,7 @@ const Login = () => {
             .then(() => {
                 e.target.reset()
                 naviget("/")
-                // toast.success("login Succsses Fully")
+                toast.success("login Succsses Fully")
                 // console.log(result.user.email)
             })
             .catch(error => setLoginError(error.message))
@@ -101,6 +103,7 @@ const Login = () => {
 
                 </div>
             </div>
+            
         </div>
     )
 

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContextProvider } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const Register = () => {
@@ -37,7 +38,7 @@ const Register = () => {
             .then(() => {
                 e.target.reset()
                 naviget("/")
-                // toast.success("Register Succsses Fully")
+                toast.success("Register Succsses Fully")
                 // console.log(result.user)
                 // setRegisterSuccess("Register Successfully")
             })

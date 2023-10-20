@@ -31,7 +31,7 @@ const Footer = () => {
         </NavLink></li>
     </>
   return (
-    <footer className="footer bg-[#23393D]  mt-10 p-10  text-neutral-content">
+    <footer className="footer bg-[#23393D]   p-10  text-neutral-content">
       <aside>
       <Link to="/" className=" font-bold text-3xl  border-none normal-case "> Auto<span className="text-[#F0C543]">Motors</span></Link>
         <ul className="flex gap-4">
