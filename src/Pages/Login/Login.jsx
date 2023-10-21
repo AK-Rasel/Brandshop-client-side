@@ -2,17 +2,17 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { AuthContextProvider } from "../../AuthProvider/AuthProvider";
-// import { AuthContextProvider } from "../../AuthProvider/AuthProvider";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-   const locat = useLocation()
-   const naviget = useNavigate();
-    
+  const locat = useLocation()
+  const naviget = useNavigate();
+
   const { user, googleLogin, login } = useContext(AuthContextProvider);
-  const d = useContext(AuthContextProvider);
-  
+
+
   const [loginError, setLoginError] = useState("");
   const loginEven = (e) => {
     e.preventDefault();
@@ -23,12 +23,26 @@ const Login = () => {
     console.log(email, password);
 
     login(email, password)
-      .then(() => {
+      .then((result) => {
         e.target.reset();
         naviget(locat?.state ? locat?.state : "/")
         toast.success("login Succsses");
         // console.log(result.user.email)
+        const {
+          user: { email },
+        } = result;
+        fetch("http://localhost:5001/create-user", {
+          method: "POST",
+          mode: "cors",
+          body: JSON.stringify({
+            email,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         
+
       })
       .catch((error) => setLoginError(error.message));
   };

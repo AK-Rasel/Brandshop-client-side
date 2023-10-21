@@ -34,12 +34,25 @@ const Register = () => {
     // console.log(password, email)
 
     createRegister(email, password)
-      .then(() => {
+      .then((result) => {
         e.target.reset();
         naviget(locat?.state ? locat?.state : "/")
         toast.success("Register Succsses Fully");
         // console.log(result.user)
         // setRegisterSuccess("Register Successfully")
+        const {
+          user: { email },
+        } = result;
+        fetch("http://localhost:5001/create-user", {
+          method: "POST",
+          mode: "cors",
+          body: JSON.stringify({
+            email,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       })
       .catch((error) => {
         setRegisterError(error.message);
