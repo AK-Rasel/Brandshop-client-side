@@ -18,7 +18,7 @@ const AddNewProduct = () => {
         const addNewProduct = {model,name,brand,availability,price,description,rating,category,image}
         // console.log(addNewProduct)
         // sent data
-        fetch('http://localhost:5001/products',{
+        fetch('https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/products',{
             method:'POST',
             headers:{
                 'content-type' : 'application/json'

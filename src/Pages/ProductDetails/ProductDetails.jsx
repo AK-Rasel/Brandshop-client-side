@@ -22,7 +22,7 @@ const ProductDetails = () => {
 
   const cartHandle = () => {
    
-    fetch("http://localhost:5001/add-to-cart", {
+    fetch("https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/add-to-cart", {
       method: "PUT",
       body: JSON.stringify({ id, image, brand, model, name, email, price }),
       headers: {

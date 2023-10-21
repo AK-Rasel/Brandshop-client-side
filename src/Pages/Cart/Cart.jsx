@@ -14,7 +14,7 @@ const Cart = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:5001/request-cart", {
+      const response = await fetch("https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/request-cart", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
@@ -35,7 +35,7 @@ const Cart = () => {
       const deleteCart = async () => {
         try {
           const response = await fetch(
-            "http://localhost:5001/delete-cart-item",
+            "https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/delete-cart-item",
             {
               method: "DELETE",
               body: JSON.stringify({ id, email }),

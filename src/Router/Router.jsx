@@ -37,19 +37,19 @@ const router = createBrowserRouter([
         path: "update-product/:id",
         element:<PrivetRouter><UpdateProduct /></PrivetRouter> ,
         loader: ({ params }) =>
-          fetch(`http://localhost:5001/product-details/${params.id}`),
+          fetch(`https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/product-details/${params.id}`),
       },
       {
         path: "/product-details/:id",
         element:<PrivetRouter><ProductDetails /></PrivetRouter> ,
         loader: ({ params }) =>
-          fetch(`http://localhost:5001/product-details/${params.id}`),
+          fetch(`https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/product-details/${params.id}`),
       },
       {
         path: "/products/:name",
         element:<PrivetRouter><Products /></PrivetRouter> ,
         loader: ({ params }) =>
-          fetch("http://localhost:5001/products/" + params.name),
+          fetch("https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/products/" + params.name),
       },
       {
         path: "/cart",

@@ -43,7 +43,7 @@ const Register = () => {
         const {
           user: { email },
         } = result;
-        fetch("http://localhost:5001/create-user", {
+        fetch("https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/create-user", {
           method: "POST",
           mode: "cors",
           body: JSON.stringify({

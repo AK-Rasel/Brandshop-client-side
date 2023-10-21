@@ -20,7 +20,7 @@ const UpdateProduct = () => {
         const image = from.image.value
          const upDateProduct = {model,name,brand,availability,price,description,rating,category,image}
 
-         fetch(`http://localhost:5001/products/${_id}`,{
+         fetch(`https://automotive-brand-shop-server-side-dkypj1pnz-ak-rasel.vercel.app/products/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type' : 'application/json'
