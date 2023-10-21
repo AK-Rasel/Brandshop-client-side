@@ -10,7 +10,10 @@ const MainLayout = () => {
             <Navbar/>
             <Outlet/>
             <Footer/>
-            <ToastContainer/>
+            <ToastContainer
+            position="top-center"
+            reverseOrder={false}
+            />
         </div>
     );
 };

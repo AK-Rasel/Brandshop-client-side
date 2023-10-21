@@ -81,8 +81,8 @@ const Navbar = () => {
                 <div className="hidden lg:block">
                     {
                         user && <div className="flex flex-row-reverse gap-3">
-                            <span className="underline text-rose-400 font-semibold">{user.displayName}</span> <div className="avatar online">
-                                <div className="w-6 rounded-full  ring ring-rose-600 ring-offset-base-100 ring-offset-1">
+                            <span className="underline font-semibold">{user.displayName}</span> <div className="avatar online">
+                                <div className="w-6 rounded-full   ring-offset-base-100 ring-offset-1">
                                     <img src={user.photoURL ? user.photoURL : "https://i.ibb.co/PgC7Rfy/Screenshot-4.png"} />
                                 </div>
                             </div>

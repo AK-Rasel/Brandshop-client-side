@@ -28,7 +28,7 @@ const AddNewProduct = () => {
         .then(data =>{
             console.log(data)
             if (data.insertedId) {
-                swal("Add New Products!");
+                swal("New product has been added!");
             }
             from.reset()
         })
@@ -38,10 +38,10 @@ const AddNewProduct = () => {
     }
     return (
         <div className="hero min-h-[70vh] ">
-            <div className="max-w-7xl  mx-auto  py-12 px-36">
+            <div className="max-w-7xl  mx-auto  py-12 px-6">
                 <form onSubmit={addProductHandle} >
                     <div className="hero-content flex-col">
-                        <h1 className="font-Montserrat uppercase text-4xl font-bold text-[#F0C543]">Add New Product</h1>
+                        <h1 className="font-Montserrat uppercase text-3xl md:text-4xl font-bold text-[#F0C543]">Add New Product</h1>
                         
                     </div>
                     <div className="grid grid-cols-2  gap-6">

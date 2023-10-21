@@ -20,15 +20,20 @@ const Banner = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper "
+        className="mySwiper lg:h-[70vh]  "
       >
-        <SwiperSlide><img className='h-[60vh] hero' src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
-        <SwiperSlide><img className=' h-[60vh] w-full' src="https://images.unsplash.com/photo-1615769516664-ca7302760b23?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+        <SwiperSlide><div className='bg-indigo-300'>
+        <img className=' object-cover h-[70vh] w-full   ' src="https://i.pinimg.com/originals/d3/3e/1a/d33e1afb5ef97d611ce17caff1af3cd5.jpg" alt="" />
+          </div></SwiperSlide>
+        <SwiperSlide><img className='  w-full h-[70vh] ' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/1c9ba719636447.57435bc519af8.jpg" alt="" /></SwiperSlide>
+          <SwiperSlide><div className='bg-indigo-300'>
+        <img className=' object-cover h-[70vh] w-full   ' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e9dc3375615009.5c5199a6f1924.jpg" alt="" />
+          </div></SwiperSlide>
 
       </Swiper>
         </div>

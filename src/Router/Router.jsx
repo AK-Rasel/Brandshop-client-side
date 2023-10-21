@@ -9,55 +9,53 @@ import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Products from "../Pages/Products/Products";
 import Error from "../Pages/Error/Error";
 import Cart from "../Pages/Cart/Cart";
-
+import PrivetRouter from "../PrivetRouter/PrivetRouter";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <Error />,
+    children: [
+      {
         path: "/",
-        element: <MainLayout />,
-        errorElement: <Error />,
-        children: [
-            {
-                path: "/",
-                element: <Home />,
-                
-            },
-            {
-                path: "/login",
-                element: <Login />
-            },
-            {
-                path: "/register",
-                element: <Register />
-            },
-            {
-                path: "/add-new-product",
-                element: <AddNewProduct />
-            },
-            {
-                path: "update-product/:id",
-                element: <UpdateProduct />,
-                loader: ({ params }) => fetch(`http://localhost:5001/products/${params.id}`)
-            },
-            {
-                path: "/product-details/:id",
-                element: <ProductDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5001/products/${params.id}`),
-            
-
-            },
-            {
-                path: '/products/:name',
-                element: <Products />,
-                loader: ({ params }) =>
+        element: <Home />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/add-new-product",
+        element:<PrivetRouter><AddNewProduct /></PrivetRouter> ,
+      },
+      {
+        path: "update-product/:id",
+        element:<PrivetRouter><UpdateProduct /></PrivetRouter> ,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5001/product-details/${params.id}`),
+      },
+      {
+        path: "/product-details/:id",
+        element:<PrivetRouter><ProductDetails /></PrivetRouter> ,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5001/product-details/${params.id}`),
+      },
+      {
+        path: "/products/:name",
+        element:<PrivetRouter><Products /></PrivetRouter> ,
+        loader: ({ params }) =>
           fetch("http://localhost:5001/products/" + params.name),
-            },
-            {
-                path: '/cart',
-                element: <Cart />
-
-            }
-        ]
-    },
-])
+      },
+      {
+        path: "/cart",
+        element:<PrivetRouter><Cart /></PrivetRouter> ,
+      },
+    ],
+  },
+]);
 export default router;

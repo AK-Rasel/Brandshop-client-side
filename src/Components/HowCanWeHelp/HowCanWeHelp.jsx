@@ -2,7 +2,7 @@
 
 const HowCanWeHelp = () => {
     return (
-        <div className="hero min-h-[40vh] mt-10 " style={{backgroundImage: 'url(https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D)'}}>
+        <div className="hero min-h-[50vh] mt-10 " style={{backgroundImage: 'url(https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D)'}}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-white">
     <div className="max-w-md">

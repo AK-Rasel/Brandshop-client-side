@@ -10,7 +10,7 @@ const BrandCards = () => {
             .then(data => setBrandNameCards(data))
     }, [])
     return (
-        <div>
+        <div className="px-5 lg:px-2">
             <div className="text-center my-10">
                 <h1 className="font-extrabold md:text-4xl lg:text-5xl uppercase font-Montserrat text-[#F0C543]">Find Your Dream Brands</h1>
             </div>

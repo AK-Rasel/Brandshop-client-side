@@ -34,7 +34,7 @@ const UpdateProduct = () => {
                 Swal.fire({
                     position: 'top-center',
                     icon: 'success',
-                    title: 'Your work has been saved',
+                    title: 'Product has been updated',
                     showConfirmButton: false,
                     timer: 1500
                   })
@@ -45,10 +45,10 @@ const UpdateProduct = () => {
     }
     return (
         <div className="hero min-h-[70vh] ">
-            <div className="max-w-7xl  mx-auto  py-12 px-36">
+            <div className="lg:max-w-7xl  mx-auto  py-12 px-6">
                 <form onSubmit={upDatehandle}>
                     <div className="hero-content flex-col">
-                        <h1 className="font-Montserrat uppercase text-4xl font-bold text-[#F0C543]">Update : {name}</h1>
+                        <h1 className="font-Montserrat uppercase text-center text-2xl md:text-4xl font-bold text-[#F0C543]">Update : {name}</h1>
                         
                     </div>
                     <div className="flex gap-6">
