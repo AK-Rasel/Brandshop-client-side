@@ -21,30 +21,10 @@ const ProductDetails = () => {
   } = productData;
 
   const cartHandle = () => {
-    // const myCart = localStorage.getItem("my-cart");
-    // if (!myCart) {
-    //   localStorage.setItem("my-cart", JSON.stringify([]));
-    // }
-
-    // if (myCart) {
-    //   const myCart = JSON.parse(localStorage.getItem("my-cart"));
-    //   const carItem = {
-    //     id,
-    //     name,
-    //     brand,
-    //     price,
-    //   };
-
-    //   const cars = myCart.find((item) => item.id === carItem.id);
-
-    //   if (cars) {
-    //     console.log("Already added");
-    //   } else localStorage.setItem("my-cart", JSON.stringify([...myCart, carItem]));
-    // }
-
+   
     fetch("http://localhost:5001/add-to-cart", {
       method: "PUT",
-      body: JSON.stringify({ id, image, brand, model, name, email }),
+      body: JSON.stringify({ id, image, brand, model, name, email, price }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -55,7 +35,7 @@ const ProductDetails = () => {
       <div className="hero min-h-screen ">
         <div className="hero-content gap-12 flex-col items-start lg:items-center lg:flex-row">
           <img src={image} className="max-w-xs md:max-w-md  flex-1 rounded-lg shadow-2xl " />
-          <div className="space-y-3 ">
+          <div className=" ">
             <h1 className="text-4xl font-bold">{brand}</h1>
             <h1 className="text-xl font-semibold">Model Name : {name} <span>{model}</span>
             </h1>

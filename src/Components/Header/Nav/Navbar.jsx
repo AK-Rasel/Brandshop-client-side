@@ -13,7 +13,7 @@ const Navbar = () => {
         logOut()
             .then(() => {
                 naviget("/login")
-                toast.success("Log Out Succsses Fully")
+                toast.success("Successfully logged out")
             })
             .catch(error => console.error(error))
     }
