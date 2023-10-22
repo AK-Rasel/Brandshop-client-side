@@ -1,8 +1,16 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## AutoMotors about my project 
 
-Currently, two official plugins are available:
+ - It is a car selling website
+ ## What is used within the website
+ - navbar , footer,brand card, my cart, Why Choose Us section,Add new product,update
+ - private router ,banner slider used, different different product Route
+ - Add to cut will be added to the cut page.
+ - Add new product category and update category personal
+ - Register password less than 6 characters, not an uppercase letter, a special character not display message. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live_Link Demo
+
+https://automotive-d88f5.web.app/
+
+

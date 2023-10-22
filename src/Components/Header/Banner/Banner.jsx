@@ -25,22 +25,39 @@ const Banner = () => {
         // }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper lg:h-[70vh]  "
+        className="mySwiper lg:h-[70vh]    "
       >
         <div className='relative'>
+          
           <SwiperSlide><div>
-            <img className=' relative object-cover h-[70vh] w-full ' src="https://i.pinimg.com/originals/d3/3e/1a/d33e1afb5ef97d611ce17caff1af3cd5.jpg" alt="" />
+          <div className=' tracking-wide  z-10 absolute top-1/3 left-0 right-1/2 translate-x-1/4 bottom-0'><div><h1 className=' mb-6  lg:text-6xl  text-4xl font-Montserrat font-extrabold  text-white'>2024 Toyota <br /> <span>Land Cruiser</span></h1> <p className='  text-[#F0C543] text-lg uppercase tracking-widest font-semibold'>Caming Soon ...</p></div></div>
+            <img className=' object-cover h-[70vh] w-full   ' src="https://i.ibb.co/cTPQsWH/landcruiser01-64c9af91d8e17.jpg" alt="" />
+           
+          </div></SwiperSlide>
+
+          <SwiperSlide>
+            <div>
+          <div className=' tracking-wide  z-10 absolute top-1/3 left-0 right-1/2 translate-x-1/4 bottom-0'><div>
+            <h1 className=' mb-6 text-4xl lg:text-6xl font-Montserrat font-extrabold  text-white'>2023 BMW <span>ix </span></h1> <p className='  text-[#F0C543] text-lg uppercase tracking-widest font-semibold'>Now available have <span>now ...</span></p></div></div>
+          <img className=' bg-cover  w-full h-[70vh] lg:h-full  ' src="https://cdn.carbuzz.com/gallery-images/840x560/1096000/700/1096786.jpg" alt="" />
+            </div></SwiperSlide>
+            <SwiperSlide><div>
+          <div className=' tracking-wide  z-10 absolute ml-6 top-1/3  left-0 translate-x-6 bottom-0'>
+            <div>
+            <h1 className=' mb-6  lg:text-6xl text-4xl font-Montserrat font-extrabold text-[#F00701]'>Tesla Model 3  
+            <br /> 
+            <span>is finally on sale in Your City</span>
+            </h1> 
+            </div></div>
+          
+            <img className=' bg-cover  relative object-cover h-[70vh] w-full ' src="https://i.ytimg.com/vi/m9rZ5WOZ9o0/maxresdefault.jpg" alt="" />
           </div>
           
           </SwiperSlide>
-          <SwiperSlide><img className='  w-full h-[70vh] ' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/1c9ba719636447.57435bc519af8.jpg" alt="" /></SwiperSlide>
-          <SwiperSlide><div className='bg-indigo-300'>
-            <img className=' object-cover h-[70vh] w-full   ' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e9dc3375615009.5c5199a6f1924.jpg" alt="" />
-          </div></SwiperSlide>
         </div>
 
         
-        <div className='  z-10 absolute top-0 right-1/2 translate-x-1/2 translate-y-1/2 bottom-1/2'><div><h1 className=' mb-6 text-center text-7xl font-Montserrat font-bold  text-[#F0C543] outline-4'>Welcome to our company</h1> <p className=' text-center text-white text-lg uppercase tracking-widest font-semibold'>to find your dream car</p></div></div>
+        
         
 
       </Swiper>
